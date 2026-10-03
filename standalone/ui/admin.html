@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="zh-Hans"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><link rel="preload" as="image" href="/assets/cover-ocean-960.webp" type="image/webp" media="(max-width:750px)"><link rel="preload" as="image" href="/assets/cover-ocean-1920.webp" type="image/webp" media="(min-width:751px)"><title>Master7 · 总部管理</title><meta name="description" content="Master7 独立平台总部"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><style>body{margin:0;background:#eaf1f7;padding:20px;font-family:system-ui,sans-serif}button{cursor:pointer}button:disabled{cursor:not-allowed}a{color:#235c85}@media(max-width:600px){body{padding:0}}#rental-demo-27{max-width:1280px;margin:auto;min-height:calc(100vh - 40px);box-shadow:0 12px 50px #16304d12}#rental-demo-27 .advanced-tools summary{cursor:pointer;font-size:16px;font-weight:600;min-height:44px;padding:8px 0}#rental-demo-27 .advanced-tools>.panel{border:0;padding-inline:0;box-shadow:none}#rental-demo-27 .advanced-tools .tools label{flex:1;min-width:220px}</style></head><body>
+<div id="rental-demo-27" lang="zh-Hans">
+<style>
+#rental-demo-27{--ink:#16304d;--soft:#52677e;--line:#dce7ef;--accent:#b49354;--pale:#edf6fb;--blue:#1c6596;background:#f5f9fc;color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif;border-radius:18px;overflow:hidden;color-scheme:light}
+#rental-demo-27 *{box-sizing:border-box}#rental-demo-27 button,#rental-demo-27 input,#rental-demo-27 select{font:inherit}
+#rental-demo-27 button{min-height:44px;border:1px solid var(--line);border-radius:10px;padding:9px 14px;background:white;color:var(--ink)}
+#rental-demo-27 button:disabled{opacity:.55}#rental-demo-27 .primary{background:var(--ink);border-color:var(--ink);color:white}
+#rental-demo-27 .gold{background:#f3ead7;color:#5c461e;border-color:#d9c392}#rental-demo-27 .active{border-color:var(--accent);background:#f5eddf}
+#rental-demo-27 .bar{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;background:white;padding:18px 22px;border-bottom:1px solid var(--line)}
+#rental-demo-27 .brand{display:flex;gap:12px;align-items:center}#rental-demo-27 .brand b{font-size:20px}#rental-demo-27 .mark{width:42px;height:42px;border-radius:12px;background:var(--pale);border:1px solid var(--line);display:grid;place-items:center}
+#rental-demo-27 .small{font-size:14px;color:var(--soft)}#rental-demo-27 nav{display:flex;gap:8px;flex-wrap:wrap}#rental-demo-27 main{padding:24px}
+#rental-demo-27 .row{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}#rental-demo-27 .tools{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+#rental-demo-27 h2{font-size:24px;font-weight:600;margin:0 0 5px}#rental-demo-27 h3{font-size:18px;font-weight:600;margin:0 0 12px}#rental-demo-27 p{margin:4px 0 14px}
+#rental-demo-27 .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:18px 0}
+#rental-demo-27 .panel{background:white;border:1px solid var(--line);border-radius:14px;padding:20px;min-width:0}
+#rental-demo-27 .stat{font-size:28px;font-weight:600;display:block;margin:4px 0}
+#rental-demo-27 .badge{display:inline-flex;align-items:center;gap:5px;font-size:14px;border-radius:7px;background:#eef5fb;color:#235c85;padding:4px 8px}
+#rental-demo-27 .badge.paused{background:#faf0da;color:#73510c}#rental-demo-27 .badge.expired{background:#fdecea;color:#922f27}
+#rental-demo-27 .tenantlist{display:grid;gap:12px}#rental-demo-27 .tenant{background:white;border:1px solid var(--line);border-radius:14px;padding:18px;display:flex;gap:15px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+#rental-demo-27 .tenant-info{flex:1;min-width:190px}#rental-demo-27 .tenant-name{font-size:18px;font-weight:600}
+#rental-demo-27 .muted{color:var(--soft)}#rental-demo-27 .note{margin:12px 0;padding:12px 15px;border-radius:9px;background:#e9f3fa;font-size:14px}
+#rental-demo-27 .formgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+#rental-demo-27 label{display:block}#rental-demo-27 input,#rental-demo-27 select{display:block;width:100%;border:1px solid #cbdbe8;border-radius:9px;padding:10px;background:white;color:var(--ink);margin-top:5px;min-height:44px}
+#rental-demo-27 input[type=checkbox]{width:20px;min-height:20px;margin:0}#rental-demo-27 input[type=color]{height:45px;padding:5px}#rental-demo-27 .check{display:flex;gap:10px;align-items:center}
+#rental-demo-27 .error{color:#a12820;min-height:24px;margin:10px 0}#rental-demo-27 .gap{margin-top:20px}
+#rental-demo-27 .two{display:grid;grid-template-columns:1.15fr 1fr;gap:18px;margin-top:20px}#rental-demo-27 .scroll{overflow:auto}
+#rental-demo-27 table{width:100%;border-collapse:collapse;min-width:450px}#rental-demo-27 th,#rental-demo-27 td{padding:12px 10px;border-bottom:1px solid var(--line);text-align:left;font-size:14px}
+#rental-demo-27 th{color:var(--soft);font-weight:500}#rental-demo-27 .money{text-align:right;font-variant-numeric:tabular-nums}
+#rental-demo-27 .catalog{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:16px 0}
+#rental-demo-27 .game{border-radius:13px;border:1px solid var(--line);background:white;padding:18px;text-align:left;min-height:130px}
+#rental-demo-27 .game strong{display:block;margin-top:15px}#rental-demo-27 .game i{color:var(--accent)}
+#rental-demo-27 .hero{background:#edf6fb url('/assets/cover-ocean-1920.webp') center/cover no-repeat;border:1px solid #d6e5ef;border-radius:17px;padding:34px;margin:18px 0;position:relative}
+#rental-demo-27 .hero .eyebrow{color:#806437;letter-spacing:.13em;font-size:13px}#rental-demo-27 .hero h2{font-family:Georgia,serif;font-size:40px;line-height:1.2;margin:14px 0}
+#rental-demo-27 .fronthead{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+#rental-demo-27 .footer{border-top:1px solid var(--line);padding:13px 22px;background:white;font-size:13px;color:var(--soft)}
+#rental-demo-27 .planrow{display:flex;justify-content:space-between;gap:15px;padding:10px 0;border-bottom:1px solid var(--line)}
+#rental-demo-27 .log{border-bottom:1px solid var(--line);padding:9px 0;font-size:14px}
+@media(max-width:750px){#rental-demo-27 main{padding:16px}#rental-demo-27 .bar{padding:15px}#rental-demo-27 .two{grid-template-columns:1fr}#rental-demo-27 .catalog{grid-template-columns:repeat(2,minmax(0,1fr))}#rental-demo-27 .grid{gap:9px}#rental-demo-27 .grid .panel{padding:12px}#rental-demo-27 .stat{font-size:23px}}
+@media(max-width:430px){#rental-demo-27 .formgrid{grid-template-columns:1fr}#rental-demo-27 .grid{grid-template-columns:1fr}#rental-demo-27 .tenant-info{min-width:0;width:100%}#rental-demo-27 .hero{padding:22px}#rental-demo-27 .hero h2{font-size:32px}#rental-demo-27 .tools{width:100%}}
+#rental-demo-27 .hero{min-height:290px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center}
+#rental-demo-27 .hero button{background:#f3ead7}
+#rental-demo-27 .frontnav{gap:5px}#rental-demo-27 .frontnav button{border-color:transparent;padding:8px 12px}
+#rental-demo-27 .quick{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+#rental-demo-27 .quick button{text-align:left;padding:17px;background:#f4f9fd}
+#rental-demo-27 .quick strong{display:block;font-size:18px}#rental-demo-27 .quick span{font-size:14px;color:#52677e}
+#rental-demo-27 .frontfoot{display:grid;grid-template-columns:1fr 1fr;gap:18px;border-top:1px solid var(--line);padding-top:20px}
+#rental-demo-27 .game{background:linear-gradient(140deg,#f7fbff,#e7f2fa);color:#16304d}
+#rental-demo-27 i[data-lucide]::before{content:"◇";font-style:normal;font-size:25px;color:#8c6c32}
+#rental-demo-27 i[data-lucide="layers"]::before{content:"";display:block}
+@media(max-width:500px){#rental-demo-27 .quick{grid-template-columns:1fr}#rental-demo-27 .hero{min-height:260px}#rental-demo-27 .frontfoot{grid-template-columns:1fr}}
+
+#rental-demo-27{border-radius:22px;background:#f6f9fc;--ink:#17314a;--line:#e0e8f0}
+#rental-demo-27 .bar{padding:14px 28px;background:#fff;border-bottom:1px solid #d9e4ee}
+#rental-demo-27 .bar .mark{display:none}
+#rental-demo-27 .bar .brand b{font-size:18px}
+#rental-demo-27 .version{display:inline-block;font-size:12px;border-radius:5px;background:#f1e8d5;color:#806230;padding:1px 6px;margin-left:5px}
+#rental-demo-27 main{padding:28px}
+#rental-demo-27 .panel{border-radius:18px;border-color:#e0e8f0;box-shadow:0 4px 18px #14314904}
+#rental-demo-27 .fronthead{min-height:62px;padding:4px 8px 12px}
+#rental-demo-27 .frontidentity{display:flex;align-items:center;gap:12px}
+#rental-demo-27 .frontend-logo{width:56px;height:56px;object-fit:contain;flex-shrink:0;background:transparent;border:0}
+#rental-demo-27 .frontend-brand{font-size:24px;font-weight:600;letter-spacing:.025em;display:inline-block;min-width:0;max-width:100%;overflow-wrap:anywhere}
+#rental-demo-27 .fronthead>div:first-child{min-width:0;flex:1 1 180px}
+#rental-demo-27 .frontnav{padding:8px 0;border-top:1px solid #edf1f5;border-bottom:1px solid #edf1f5}
+#rental-demo-27 .frontnav button{background:transparent;border-radius:8px;min-height:44px}
+#rental-demo-27 .frontnav .active{background:#edf5fb;border-color:transparent;color:#1c6596}
+#rental-demo-27 .hero{border-radius:18px;min-height:335px;padding:44px;border:0;background-position:center;box-shadow:inset 0 0 0 1px #dbe8f0}
+#rental-demo-27 .hero h2{font-size:clamp(32px,4.5vw,58px);letter-spacing:-.025em;color:#17314a;max-width:60%;overflow-wrap:anywhere}
+#rental-demo-27 .hero p{max-width:60%;color:#405b73;overflow-wrap:anywhere}
+#rental-demo-27 .hero .eyebrow{font-weight:600;letter-spacing:.18em;font-size:12px}
+#rental-demo-27 .quick{margin:22px 0;gap:16px}
+#rental-demo-27 .quick button{padding:20px 22px;border-color:#dde8ef;border-radius:14px;background:#f4f9fd}
+#rental-demo-27 .quick strong{margin-bottom:5px;color:#17314a}
+#rental-demo-27 .catalog{gap:16px}
+#rental-demo-27 .game{min-height:150px;border-radius:15px;padding:22px;background:linear-gradient(145deg,#fafcff,#e9f3fa);border-color:#dce8f0;transition:transform .15s ease,border-color .15s ease}
+#rental-demo-27 .game:hover{transform:translateY(-2px);border-color:var(--accent)}
+#rental-demo-27 .game strong{font-size:16px;margin-top:24px}
+#rental-demo-27 .tenant{border-radius:16px;padding:22px}
+#rental-demo-27 .grid .panel{border-top:3px solid #d7e8f3}
+#rental-demo-27 .wallet-total{padding:24px 0;margin-bottom:16px;border-bottom:1px solid #e0e8f0}
+#rental-demo-27 .wallet-total span{display:block;color:#52677e;font-size:14px}
+#rental-demo-27 .wallet-total strong{display:block;font-size:36px;color:#17314a;font-variant-numeric:tabular-nums}
+#rental-demo-27 .mobile-nav{display:none}
+@media(max-width:750px){#rental-demo-27{border-radius:0}#rental-demo-27 main{padding:14px}#rental-demo-27 .bar{padding:12px 16px}#rental-demo-27 .hero{min-height:285px;padding:26px}#rental-demo-27 .frontnav{overflow:auto;flex-wrap:nowrap;gap:4px}#rental-demo-27 .frontnav button{white-space:nowrap}#rental-demo-27 .hero h2,#rental-demo-27 .hero p{max-width:65%}#rental-demo-27 .catalog{gap:10px}#rental-demo-27 .game{padding:16px;min-height:132px}#rental-demo-27 .footer{padding-bottom:calc(88px + env(safe-area-inset-bottom))}#rental-demo-27 .mobile-nav{display:flex;position:fixed;bottom:0;inset-inline:0;z-index:50;background:#fff;border-top:1px solid #dce7ef;box-shadow:0 -6px 20px #16304d08;padding:7px 8px calc(7px + env(safe-area-inset-bottom));gap:4px}#rental-demo-27 .mobile-nav button{flex:1;min-width:0;border:0;padding:9px 4px;border-radius:8px;font-size:14px}#rental-demo-27 .quick{gap:10px;margin:18px 0}}
+@media(max-width:500px){#rental-demo-27 .quick{grid-template-columns:repeat(3,minmax(0,1fr))}#rental-demo-27 .quick button{padding:13px 9px}#rental-demo-27 .quick strong{font-size:16px}#rental-demo-27 .quick span{display:block;font-size:12px;line-height:1.5}#rental-demo-27 .frontend-logo{width:44px;height:44px}#rental-demo-27 .hero h2{max-width:78%}#rental-demo-27 .hero p{max-width:78%}#rental-demo-27 .panel{padding:16px}}
+
+body{background:radial-gradient(ellipse at 15% 0%,#f8fcff 0%,#e9f2f8 55%,#e8edf4 100%);color:#18324a}
+#rental-demo-27{font-family:system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.6;background:#f6f9fc;box-shadow:0 22px 70px #2346650d}
+#rental-demo-27 h2,#rental-demo-27 h3{overflow-wrap:anywhere;letter-spacing:-.015em}
+#rental-demo-27 button{font-size:14px;line-height:1.4;min-height:44px;border-radius:11px}
+#rental-demo-27 button:focus-visible,#rental-demo-27 input:focus-visible,#rental-demo-27 select:focus-visible,#rental-demo-27 textarea:focus-visible{outline:3px solid #86bce5;outline-offset:3px}
+#rental-demo-27 .bar{background:#fff;padding:16px 28px}
+#rental-demo-27 .bar .active{background:#173d61;color:#fff;border-color:#173d61}
+#rental-demo-27 .panel{padding:24px;border-radius:20px;background:#fff;box-shadow:0 6px 24px #21486705}
+#rental-demo-27 .fronthead{min-height:72px;padding:4px 4px 18px}
+#rental-demo-27 .frontnav{gap:7px;padding:10px 0 12px}
+#rental-demo-27 .frontnav button{padding:10px 15px;font-size:14px}
+#rental-demo-27 .frontnav .active{background:#eaf4fc;color:#174f7d;box-shadow:inset 0 0 0 1px #dbeaf5}
+#rental-demo-27 .hero{min-height:375px;padding:48px;border-radius:22px;background-color:#edf5fa;background-size:cover;background-position:center;background-repeat:no-repeat;background-image:linear-gradient(90deg,#ffffffed 0%,#ffffffe0 30%,#ffffff66 58%,#ffffff00 80%),url('/assets/cover-ocean-1920.webp');box-shadow:inset 0 0 0 1px #dce9f1,0 8px 28px #24517308}
+#rental-demo-27 .hero[data-cover="classic"]{background-image:linear-gradient(90deg,#ffffffed 0%,#ffffffe0 30%,#ffffff66 58%,#ffffff00 80%),url('/assets/cover-classic-1920.webp')}
+#rental-demo-27 .hero .eyebrow{display:inline-block;padding:5px 12px;border:1px solid #b4d2e5;border-radius:50px;color:#336d98;background:#ffffffb8;font-size:11px;letter-spacing:.17em}
+#rental-demo-27 .hero h2{margin:18px 0 12px;font-size:clamp(34px,4.2vw,56px);line-height:1.16;max-width:62%;color:#173b5e;font-weight:650}
+#rental-demo-27 .hero p{margin:0 0 22px;max-width:59%;color:#4c6a82;font-size:16px;line-height:1.7}
+#rental-demo-27 .hero p:empty{display:none}
+#rental-demo-27 .hero button{padding:12px 26px;box-shadow:0 5px 14px #ab8b3f17}
+#rental-demo-27 .quick{margin:24px 0;gap:16px}
+#rental-demo-27 .quick button{padding:21px 23px;background:linear-gradient(135deg,#fff,#f0f7fc);border-color:#dce8f1;box-shadow:0 4px 15px #23476505}
+#rental-demo-27 .quick strong{font-size:20px;margin-bottom:6px}
+#rental-demo-27 .quick span{font-size:14px;line-height:1.6}
+#rental-demo-27 .catalog{gap:16px;margin-top:18px}
+#rental-demo-27 .game{position:relative;min-height:170px;overflow:hidden;padding:24px;border:1px solid #dbe7f0;background:radial-gradient(circle at 95% 5%,#d6ebfa 0%,#edf6fc 42%,#fcfdff 85%);text-align:left;box-shadow:0 4px 16px #23476504}
+#rental-demo-27 .game i{display:block;width:40px;height:40px;line-height:40px;border-radius:12px;text-align:center;background:#ffffffb0;border:1px solid #e0e9f0}
+#rental-demo-27 .game strong{margin-top:22px;font-size:17px}
+#rental-demo-27 .game .small{display:block;font-size:13px;margin-top:5px}
+#rental-demo-27 .game:hover{box-shadow:0 8px 22px #2347650b}
+#rental-demo-27 .tenant{background:linear-gradient(135deg,#fff,#f9fcff);box-shadow:0 5px 20px #23476505}
+#rental-demo-27 .tenant-name,#rental-demo-27 .tenant-info .small{overflow-wrap:anywhere}
+#rental-demo-27 .grid .panel{border-top-color:#b7d7ee}
+#rental-demo-27 .stat{color:#173b5e;font-variant-numeric:tabular-nums;line-height:1.25}
+#rental-demo-27 input,#rental-demo-27 select,#rental-demo-27 textarea{font-size:16px;min-height:44px;border-radius:11px}
+#rental-demo-27 .planrow{padding:13px 0;gap:15px;overflow-wrap:anywhere}
+#rental-demo-27 th{background:#f1f7fc;color:#506c82;font-weight:600}
+#rental-demo-27 td{padding-top:14px;padding-bottom:14px}
+#rental-demo-27 tbody tr:hover{background:#f9fcfe}
+#rental-demo-27 .frontfoot{padding-top:26px;margin-top:26px;color:#35536c}
+#rental-demo-27 .mobile-nav{box-shadow:0 -6px 22px #2347650a}
+@media(max-width:750px){#rental-demo-27 main{padding:14px}#rental-demo-27 .panel{padding:18px;border-radius:16px}#rental-demo-27 .bar{padding:12px 16px}#rental-demo-27 .hero{min-height:310px;padding:28px 24px;border-radius:17px;background-image:linear-gradient(90deg,#ffffffed 0%,#ffffffbb 45%,#ffffff4d 78%,#ffffff00 100%),url('/assets/cover-ocean-960.webp')}#rental-demo-27 .hero[data-cover="classic"]{background-image:linear-gradient(90deg,#ffffffed 0%,#ffffffbb 45%,#ffffff4d 78%,#ffffff00 100%),url('/assets/cover-classic-960.webp')}#rental-demo-27 .hero h2{max-width:84%;font-size:36px}#rental-demo-27 .hero p{max-width:82%;font-size:15px}#rental-demo-27 .frontnav button{padding:10px 12px}#rental-demo-27 .quick{gap:10px;margin:18px 0}#rental-demo-27 .quick button{padding:16px 13px}#rental-demo-27 .quick strong{font-size:18px}#rental-demo-27 .quick span{font-size:13px}#rental-demo-27 .game{padding:18px;min-height:150px}}
+@media(max-width:430px){#rental-demo-27 .hero{min-height:290px;padding:24px 20px}#rental-demo-27 .hero h2{font-size:32px}#rental-demo-27 .quick button{padding:14px 10px}#rental-demo-27 .quick strong{font-size:17px}#rental-demo-27 .quick span{font-size:12px}}
+
+
+/* V2.3: saved customer palette; colors and readable text are computed together. */
+body{background:radial-gradient(ellipse at 15% 0%,var(--theme-deep-high,#165079) 0%,var(--theme-deep,#0b2d4e) 55%,var(--theme-deep-low,#071c35) 100%)}
+#rental-demo-27{--ink:var(--theme-ink,#102f4c);--soft:var(--theme-soft,#3f6179);--line:var(--theme-line,#9fc8df);--pale:var(--theme-surface,#c9eafa);background:linear-gradient(150deg,var(--theme-aqua,#b8deef),var(--theme-surface,#d9eef8));box-shadow:0 24px 75px #020d2055}
+#rental-demo-27 button{background:var(--theme-panel-low,#d7ebf5)}
+#rental-demo-27 .active{background:var(--theme-gold,#b49354);color:var(--theme-on-gold,#102f4c);border-color:var(--theme-gold,#b49354)}
+#rental-demo-27 i[data-lucide]::before{color:var(--theme-ink,#102f4c)}
+#rental-demo-27 .bar{background:linear-gradient(115deg,var(--theme-deep-low,#082c50),var(--theme-deep,#124b76));color:var(--theme-on-deep,#f0faff);border-bottom:1px solid var(--theme-line,#66acd0)}
+#rental-demo-27 .bar .small{color:var(--theme-on-deep,#bcdaeb)}
+#rental-demo-27 .bar button{background:var(--theme-deep,#124a75);color:var(--theme-on-deep,#e7f6ff);border-color:var(--theme-on-deep,#397497)}
+#rental-demo-27 .bar .active{background:var(--theme-aqua,#9bdff1);color:var(--theme-on-aqua,#0c2e4d);border-color:var(--theme-line,#bbecf9)}
+#rental-demo-27 .version{background:var(--theme-gold,#dfc189);color:var(--theme-on-gold,#1c3550)}
+#rental-demo-27 .panel{background:linear-gradient(145deg,var(--theme-panel,#e3f2fa),var(--theme-panel-low,#d0e9f6));border-color:var(--theme-line,#a4ccdf);box-shadow:0 7px 24px #0d375412}
+#rental-demo-27 .fronthead{border-bottom:1px solid var(--theme-line,#9fc8df)}
+#rental-demo-27 .frontend-brand,#rental-demo-27 .stat,#rental-demo-27 .wallet-total strong,#rental-demo-27 .wallet-total span{color:var(--theme-ink,#103c61)}
+#rental-demo-27 .frontnav{border-color:var(--theme-line,#9fc8df);padding-block:14px}
+#rental-demo-27 .frontnav button{background:var(--theme-panel-low,#c4e5f4);border-color:var(--theme-line,#afd5e8);color:var(--theme-ink,#153f60)}
+#rental-demo-27 .frontnav .active{background:var(--theme-deep,#123f67);color:var(--theme-on-deep,#edf9ff);border-color:var(--theme-deep,#123f67);box-shadow:inset 0 -2px 0 var(--theme-gold,#dfc189)}
+#rental-demo-27 .hero{background-color:var(--theme-deep,#0d3a62);background-image:linear-gradient(90deg,var(--theme-deep-low,#082c50) 0%,var(--theme-deep,#0c3e67) 62%,transparent 86%),url('/assets/cover-ocean-1920.webp');box-shadow:inset 0 0 0 1px var(--theme-line,#529bb8),0 12px 30px #123c5a1c}
+#rental-demo-27 .hero[data-cover="classic"]{background-image:linear-gradient(90deg,var(--theme-deep-low,#082c50) 0%,var(--theme-deep,#0c3e67) 62%,transparent 86%),url('/assets/cover-classic-1920.webp')}
+#rental-demo-27 .hero h2,#rental-demo-27 .hero p{color:var(--theme-on-deep,#f0f9ff);text-shadow:0 2px 12px #07254422}
+#rental-demo-27 .hero .eyebrow{background:var(--theme-gold,#f0d597);border-color:var(--theme-gold,#90c7dc);color:var(--theme-on-gold,#102f4c);font-size:12px}
+#rental-demo-27 .primary{background:var(--theme-deep,#113f66);border-color:var(--theme-deep,#113f66);color:var(--theme-on-deep,#edf9ff)}
+#rental-demo-27 .gold{background:linear-gradient(135deg,var(--theme-gold,#f0dba9),var(--theme-gold-light,#d5b578));border-color:var(--theme-gold,#c2a25b);color:var(--theme-on-gold,#15344f)}
+#rental-demo-27 .hero button{background:var(--theme-gold,#dfc189);color:var(--theme-on-gold,#15344f)}
+#rental-demo-27 .quick button{background:linear-gradient(135deg,var(--theme-quick,#aad8ec),var(--theme-surface,#cdebf7));border-color:var(--theme-line,#89bdd8);box-shadow:0 6px 18px #1b567516}
+#rental-demo-27 .quick strong,#rental-demo-27 .quick span{color:var(--theme-ink,#0d3a5d)}
+#rental-demo-27 .game{background:radial-gradient(circle at 95% 5%,var(--theme-aqua,#8ec8e3),var(--theme-panel-low,#c1e5f4) 46%,var(--theme-panel,#d8edf7) 95%);border-color:var(--theme-line,#8cbeda);color:var(--theme-ink,#16304d)}
+#rental-demo-27 .game i{background:var(--theme-panel,#e1f4fb);border-color:var(--theme-line,#8ebbd3)}
+#rental-demo-27 .game:nth-child(4n+1){background:linear-gradient(145deg,var(--theme-deep-low,#0d355b),var(--theme-deep,#17638d));border-color:var(--theme-deep,#397da1);color:var(--theme-on-deep,#f1f9ff)}
+#rental-demo-27 .game:nth-child(4n+1) .small,#rental-demo-27 .game:nth-child(4n+1) i::before{color:var(--theme-on-deep,#c3e1f0)}
+#rental-demo-27 .game:nth-child(4n+1) i{background:var(--theme-deep,#164f75);border-color:var(--theme-on-deep,#5799b7)}
+#rental-demo-27 .tenant{background:linear-gradient(135deg,var(--theme-panel,#dbf0fb),var(--theme-panel-low,#bddfec));border-color:var(--theme-line,#91bed6)}
+#rental-demo-27 .grid>.panel{border-top:3px solid var(--theme-deep,#297397)}
+#rental-demo-27 .grid>.panel:first-child{background:linear-gradient(130deg,var(--theme-deep-low,#0c3358),var(--theme-deep,#175b83));color:var(--theme-on-deep,#f1faff)}
+#rental-demo-27 .grid>.panel:first-child .small,#rental-demo-27 .grid>.panel:first-child .stat{color:var(--theme-on-deep,#f5fbff)}
+#rental-demo-27 input,#rental-demo-27 select,#rental-demo-27 textarea{background:var(--theme-input,#f0f8fd);border-color:var(--theme-line,#82b4d1);color:var(--theme-ink,#102f4c)}
+#rental-demo-27 .note{background:var(--theme-panel-low,#b9dded);color:var(--theme-ink,#173e59);border:1px solid var(--theme-line,#92c2d8)}
+#rental-demo-27 th{background:var(--theme-deep,#123e64);color:var(--theme-on-deep,#e9f7ff)}
+#rental-demo-27 td{border-color:var(--theme-line,#acd1e4)}
+#rental-demo-27 tbody tr:hover{background:var(--theme-panel,#c0e1f1)}
+#rental-demo-27 .advanced-tools>.panel{background:transparent}
+#rental-demo-27 .frontfoot{border-top:1px solid var(--theme-line,#94c1da);color:var(--theme-ink,#174765)}
+#rental-demo-27 .footer,#rental-demo-27 .mobile-nav{background:var(--theme-deep-low,#0c3053);border-color:var(--theme-on-deep,#4785a7);color:var(--theme-on-deep,#cce4f1)}
+#rental-demo-27 .mobile-nav button{background:transparent;color:var(--theme-on-deep,#e1f3fd)}
+#rental-demo-27 .mobile-nav .active{background:var(--theme-aqua,#a7dfef);color:var(--theme-ink,#113751)}
+#rental-demo-27 .theme-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:16px 0}
+#rental-demo-27 .theme-grid input[type=color]{height:58px;cursor:pointer}
+#rental-demo-27 .theme-sample{padding:20px;border-radius:14px;background:var(--theme-deep);color:var(--theme-on-deep);display:flex;gap:14px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+#rental-demo-27 .theme-sample strong{font-size:22px}
+#rental-demo-27 .theme-sample .small{color:var(--theme-on-deep)}
+@media(max-width:750px){#rental-demo-27 .hero{background-image:linear-gradient(90deg,var(--theme-deep-low,#082c50) 0%,var(--theme-deep,#0c3e67) 86%,transparent 100%),url('/assets/cover-ocean-960.webp')}#rental-demo-27 .hero[data-cover="classic"]{background-image:linear-gradient(90deg,var(--theme-deep-low,#082c50) 0%,var(--theme-deep,#0c3e67) 86%,transparent 100%),url('/assets/cover-classic-960.webp')}}
+@media(max-width:500px){#rental-demo-27 .theme-grid{grid-template-columns:1fr}}
+
+@media(prefers-reduced-motion:reduce){#rental-demo-27 .game{transition:none}}
+
+#rental-demo-27 .hero[data-cover="premium"]{background-image:linear-gradient(90deg,var(--theme-deep-low,#082c50) 0%,var(--theme-deep,#0c3e67) 55%,transparent 82%),url('/assets/cover-premium-1920.webp')}
+@media(max-width:750px){#rental-demo-27 .hero[data-cover="premium"]{background-image:linear-gradient(90deg,var(--theme-deep-low,#082c50) 0%,var(--theme-deep,#0c3e67) 55%,transparent 92%),url('/assets/cover-premium-960.webp')}}
+</style>
+<div id="rd-app"></div>
+<script src="/assets/theme.js"></script>
+<script src="/assets/marketing.js"></script>
+<script src="/assets/ai-access.js"></script>
+<script>
+(function(){
+const root=document.getElementById('rental-demo-27'),app=root.querySelector('#rd-app');
+let csrfToken='',readOnly=true;
+const dateMY=d=>{const p=new Intl.DateTimeFormat('en-US',{timeZone:'Asia/Kuala_Lumpur',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(d);return ['year','month','day'].map(k=>p.find(x=>x.type===k).value).join('-');};
+const today=()=>dateMY(new Date());
+const later=()=>dateMY(new Date(Date.now()+90*86400000));
+const fresh=(id,name,domain)=>({id,name,domain,until:later(),status:'active',color:'#b49354',deepColor:'#123f67',aquaColor:'#b8deef',language:'三语',ai:false,ledger:[],members:[],hidden:[],headline:'Welcome',subtitle:'',brandTitle:'',logo:'seven',cover:'premium',marketing:window.RentalMarketing.create(),aiAccess:window.RentalAI.create()});
+let tenants=[],selected='',view='hq',creating=false,category='全部',authMode='',next=3,adminTab='overview',reportOpen=false,frontPage='home';
+let logs=[],notice='',identity={owner:false,userId:''},assignments=[],saving=false,pendingRequest=null,modelText='',importing=false,advancedOpen=false,themeDraft=null;
+const esc=x=>String(x).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const money=x=>new Intl.NumberFormat('en-MY',{style:'currency',currency:'MYR'}).format(x/100);
+const t=()=>tenants.find(x=>x.id===selected)||tenants[0];
+const status=x=>x.until<today()?'expired':x.status;
+const stateName=x=>({active:'配置启用',paused:'暂停',draft:'草稿',expired:'已到期'}[status(x)]);
+const btn=(label,action,id='',cls='')=>'<button type="button" class="cursor-interaction '+cls+'" data-action="'+action+'"'+(id?' data-id="'+esc(id)+'"':'')+'>'+label+'</button>';
+const badge=x=>'<span class="badge '+status(x)+'">'+stateName(x)+'</span>';
+function log(text){logs.unshift({time:new Date().toLocaleTimeString('zh-CN',{hour:'2-digit',minute:'2-digit'}),text});}
+function header(){return '<header class="bar"><div class="brand"><div><b>Master7 总部</b><div class="small">独立管理后台 <span class="version">2027</span></div></div></div><nav aria-label="总部页面">'+(identity.owner?btn('全部客户','view-hq','',view==='hq'?'active':''):'')+btn('客户配置','view-tenant','',view==='tenant'?'active':'')+btn('看首页','view-front','',view==='front'?'active':'')+btn('退出','logout')+'</nav></header>';}
+function options(){return tenants.map(x=>'<option value="'+esc(x.id)+'"'+(x.id===selected?' selected':'')+'>'+esc(x.name)+'</option>').join('');}
+function picker(){return '<label class="small">选择客户平台<select id="rd-select">'+options()+'</select></label>';}
+function form(create){const x=t();return '<section class="panel gap"><h3>'+ (create?'复制模板，开新平台':'品牌与租期设置')+'</h3><form id="'+(create?'rd-create':'rd-settings')+'"><div class="formgrid"><label>客户名称<input name="name" required maxlength="40" value="'+(create?'':esc(x.name))+'" placeholder="例如：客户 C"></label><label>拟用网址（尚未绑定）<input name="domain" required maxlength="100" value="'+(create?'':esc(x.domain))+'" placeholder="client-c.example"></label><label>租期结束日期<input name="until" type="date" required value="'+(create?later():x.until)+'"'+(create?' min="'+today()+'"':'')+'></label><label>语言标签（样位）<select name="language">'+['三语','中文','English','Bahasa Melayu'].map(z=>'<option'+(!create&&z===x.language?' selected':'')+'>'+z+'</option>').join('')+'</select></label>'+(create?'<label>金色／点缀颜色<input name="color" type="color" value="#b49354"></label>':'')+'<label>首页标题<input name="headline" maxlength="60" value="'+(create?'Welcome':esc(x.headline))+'"></label><label>首页副标题<input name="subtitle" maxlength="100" value="'+(create?'':esc(x.subtitle))+'"></label><label>前台品牌名（可留空）<input name="brandTitle" maxlength="40" value="'+(create?'':esc(x.brandTitle))+'"></label><label>前台 Logo<select name="logo"><option value="seven"'+((create||x.logo==='seven')?' selected':'')+'>新版数字 7</option><option value="none"'+(!create&&x.logo==='none'?' selected':'')+'>不显示 Logo</option></select></label><label>封面风格<select name="cover"><option value="premium"'+((create||x.cover==='premium')?' selected':'')+'>流光玻璃</option><option value="classic"'+(!create&&x.cover==='classic'?' selected':'')+'>极简建筑</option></select></label><label>平台状态<select name="status">'+['active','paused','draft'].map(z=>'<option value="'+z+'"'+((create?z==='active':x.status===z)?' selected':'')+'>'+({active:'配置启用',paused:'暂停',draft:'草稿'}[z])+'</option>').join('')+'</select></label></div><p class="small gap">'+(create?'复制外观与设置；会员和账目从空白开始，AI 默认关闭。':'改动保存到独立后台；网址尚未绑定。租期和平台状态由总部管理。')+'</p><div class="error" id="rd-error" role="alert"></div><div class="tools"><button class="primary cursor-interaction" type="submit">'+(create?'保存新客户':'保存设置')+'</button>'+(create?btn('取消','cancel-create'):'')+'</div></form></section>';}
+function hq(){return '<div class="row"><div><h2>客户平台</h2><span class="muted">保存客户配置，复制品牌模板，管理各客户权限。</span></div>'+'<div class="tools">'+btn('＋ 创建客户','create','','primary')+'</div>'+'</div><div class="grid"><div class="panel"><span class="small">演示平台</span><span class="stat">'+tenants.length+'</span></div><div class="panel"><span class="small">配置启用</span><span class="stat">'+tenants.filter(x=>status(x)==='active').length+'</span></div><div class="panel"><span class="small">AI 选配开启</span><span class="stat">'+tenants.filter(x=>x.ai).length+'</span></div></div><div class="tenantlist">'+tenants.map(x=>'<article class="tenant"><div class="tenant-info"><div class="tenant-name">'+esc(x.name)+' '+badge(x)+'</div><div class="small">'+esc(x.domain)+' · 未绑定域名</div><div class="small">到期 '+esc(x.until)+' · AI '+(x.ai?'选配开启':'关闭')+'</div></div><div class="tools">'+btn('客户后台','manage',x.id)+btn('看效果','preview',x.id)+btn('改颜色','theme-open',x.id)+btn('复制配置','clone',x.id,'gold')+btn(x.status==='paused'?'恢复':'暂停','pause',x.id)+'</div></article>').join('')+'</div>'+(creating?form(true):'')+'<div class="two"><section class="panel"><h3>样板配置</h3><div class="planrow"><span>主题</span><span>水蓝 · 深蓝 · 金色</span></div><div class="planrow"><span>注册方式</span><span>手机 / 邮箱</span></div><div class="planrow"><span>AI 客服</span><span>默认关闭，按需添加</span></div><div class="planrow"><span>游戏目录</span><span>以后按原平台核对</span></div><div class="planrow"><span>配置保存</span><span>独立数据库</span></div><div class="planrow"><span>Android APK</span><span>待正式开发</span></div></section><section class="panel"><h3>后台操作记录</h3>'+logs.slice(0,5).map(l=>'<div class="log"><span class="small">'+esc(l.time)+'</span> '+esc(l.text)+'</div>').join('')+'</section></div>'+workspaceTools();}
+function ledger(x){const total=x.ledger.reduce((a,l)=>a+l.cents,0);return '<section class="panel"><div class="row"><h3>演示账目</h3>'+btn('添加示例记录','sample','','gold')+'</div><p class="small">仅示例数据，无真实资金；余额 '+money(total)+'</p><div class="scroll"><table><thead><tr><th>流水</th><th>类别</th><th class="money">金额</th><th>状态</th></tr></thead><tbody>'+ (x.ledger.length?x.ledger.map((l,i)=>'<tr><td>DEMO-'+String(i+1).padStart(3,'0')+'</td><td>'+esc(l.label)+'</td><td class="money">'+money(l.cents)+'</td><td>模拟记账</td></tr>').join(''):'<tr><td colspan="4">此客户没有示例记录。复制模板不会带走别人的账目。</td></tr>')+'</tbody></table></div></section>';}
+function tenantOverview(){const x=t();return '<div class="row"><div><h2>'+esc(x.name)+'</h2>'+badge(x)+'</div>'+picker()+'</div><div class="grid"><div class="panel"><span class="small">演示会员</span><span class="stat">'+x.members.length+'</span></div><div class="panel"><span class="small">演示钱包</span><span class="stat">'+money(x.ledger.reduce((a,l)=>a+l.cents,0))+'</span></div><div class="panel"><span class="small">租期结束</span><span class="stat" style="font-size:20px">'+esc(x.until)+'</span></div></div>'+ledger(x)+'<div class="two"><section class="panel"><h3>AI 客服选配</h3><label class="check"><input id="rd-ai" type="checkbox" '+(x.ai?'checked':'')+'><span>为这个客户开启 AI 演示</span></label><p class="small gap">模拟问答，不调用外部 AI，不收集密钥。</p>'+btn('试一下客服','ai-test','','gold')+'<div id="rd-answer" class="note">客户需要时才添加。</div></section><section class="panel"><h3>接口与安全</h3><div class="planrow"><span>游戏 API</span><span>尚未连接</span></div><div class="planrow"><span>支付网关</span><span>尚未连接</span></div><div class="planrow"><span>短信 / 邮件验证</span><span>尚未连接</span></div><div class="planrow"><span>资金审核 / 风控</span><span>待正式实现</span></div><div class="planrow"><span>客户数据隔离</span><span>服务器按账号检查权限</span></div></section></div>'+form(false);}
+
+function memberPanel(x){return '<section class="panel"><div class="row"><h3>演示会员管理</h3><div class="tools">'+btn('模拟手机注册','member-add','phone','gold')+btn('模拟邮箱注册','member-add','email')+'</div></div><p class="small">只生成虚构会员，不填写个人信息；无真实短信或邮箱验证。</p><div class="scroll"><table><thead><tr><th>会员</th><th>注册方式</th><th>状态</th><th>操作</th></tr></thead><tbody>'+(x.members.length?x.members.map(m=>'<tr><td>'+esc(m.alias)+'</td><td>'+ (m.method==='phone'?'手机':'邮箱')+'</td><td>'+ (m.active?'演示启用':'演示停用')+'</td><td>'+btn(m.active?'停用':'恢复','member-toggle',m.id)+'</td></tr>').join(''):'<tr><td colspan="4">这个客户还没有演示会员。</td></tr>')+'</tbody></table></div></section>';}
+function reportText(x){return ['演示报表，无真实资金','客户：'+x.name,'演示平台：'+x.domain,'币种：MYR','类别,金额,状态',...x.ledger.map(l=>l.label+','+(l.cents/100).toFixed(2)+',模拟记账'),'净变动,'+(x.ledger.reduce((a,l)=>a+l.cents,0)/100).toFixed(2)].join('\n');}
+function reportPanel(x){const incoming=x.ledger.filter(l=>l.cents>0).reduce((a,l)=>a+l.cents,0),out=-x.ledger.filter(l=>l.cents<0).reduce((a,l)=>a+l.cents,0);return '<section class="panel"><div class="row"><h3>演示账目报表</h3>'+btn('报表文本预览','report-open','','gold')+'</div><p class="small">根据当前客户的示例流水计算。净变动不是经营利润。</p><div class="grid"><div><span class="small">示例入账</span><strong class="stat">'+money(incoming)+'</strong></div><div><span class="small">示例出账</span><strong class="stat">'+money(out)+'</strong></div><div><span class="small">净变动</span><strong class="stat">'+money(incoming-out)+'</strong></div></div><div class="planrow"><span>演示会员</span><span>'+x.members.length+'</span></div><div class="planrow"><span>示例流水数量</span><span>'+x.ledger.length+'</span></div><div class="planrow"><span>游戏收入与供应商成本</span><span>等待 API 数据</span></div><div class="planrow"><span>经营净利润</span><span>等待完整费用数据</span></div>'+(reportOpen?'<label class="gap">可复制的演示报表<textarea readonly rows="9" style="width:100%;font:inherit;border:1px solid #cbdbe8;border-radius:9px;padding:12px;background:#f0f8fd;color:#16304d">'+esc(reportText(x))+'</textarea></label>':'')+'</section>';}
+function gamePanel(x){return '<section class="panel"><div class="row"><h3>游戏目录管理</h3>'+btn('查看前台效果','view-front','','gold')+'</div><p class="small">你提供的游戏资源以后统一接入。这里先管理样板入口显示，不代表游戏已接通。</p><div class="scroll"><table><thead><tr><th>占位入口</th><th>分类</th><th>连接</th><th>前台显示</th></tr></thead><tbody>'+games.map((g,i)=>'<tr><td>'+g.name+'</td><td>'+g.cat+'</td><td>等待 API</td><td>'+btn(x.hidden.includes(i)?'隐藏 · 点击显示':'显示 · 点击隐藏','game-toggle',String(i))+'</td></tr>').join('')+'</tbody></table></div></section>';}
+function themePanel(x){const palette=themeDraft?.tenantId===x.id?themeDraft.values:window.RentalTheme.colors(x);return '<section class="panel gap"><div class="row"><h3>自己改平台颜色</h3>'+picker()+'</div><p class="small">调整水蓝、深蓝和金色，可即时看效果。只保存到所选客户；总部可以管理全部客户。</p><form id="rd-theme"><div class="theme-grid">'+[['aquaColor','水蓝／页面底色'],['deepColor','深蓝／导航主色'],['color','金色／按钮点缀']].map(([key,label])=>'<label>'+label+'<input type="color" name="'+key+'" data-theme-color="'+key+'" value="'+esc(palette[key])+'"></label>').join('')+'</div><div class="theme-sample"><div><strong>PREMIUM EXPERIENCE</strong><div class="small">颜色效果预览</div></div><span class="badge" style="background:var(--theme-gold);color:var(--theme-on-gold)">SEVEN</span></div><p class="small gap" id="rd-theme-state" role="status">'+(themeDraft?'正在预览，还未保存。满意后按“保存颜色”。':'当前显示已保存的配色。')+'</p><div class="tools"><button type="submit" class="primary">保存颜色</button>'+btn('恢复蓝金默认','theme-reset')+btn('取消预览','theme-cancel')+'</div><p class="small gap">选色影响页面底色、导航、卡片和按钮。封面图片和 Logo 由品牌设置选择。</p></form></section>';}
+function settingsPanel(x){return themePanel(x)+form(false)+'<section class="panel gap"><h3>AI 客服选配</h3><label class="check"><input id="rd-ai" type="checkbox" '+(x.ai?'checked':'')+'><span>为当前客户开启 AI 演示</span></label><p class="small gap">客户需要时才添加，正式 API 以后连接。</p>'+btn('试一下客服','ai-test','','gold')+'<div class="note" id="rd-answer">仅模拟问答，不发送外部请求。</div></section>';}
+function tenant(){const x=t();const nav='<nav class="gap" aria-label="客户后台栏目">'+[['overview','总览'],['members','会员'],['ledger','账目'],['reports','报表'],['games','游戏管理'],['marketing','推广中心'],['ai-access','AI 接入'],['settings','设置']].map(([key,label])=>btn(label,'admin-tab',key,adminTab===key?'active':'')).join('')+'</nav>';
+if(adminTab==='overview')return nav+tenantOverview();
+const top='<div class="row gap"><div><h2>'+esc(x.name)+'</h2>'+badge(x)+' <span class="badge">示例数据</span></div>'+picker()+'</div>';
+const content=adminTab==='members'?memberPanel(x):adminTab==='ledger'?ledger(x)+'<div class="tools gap">'+btn('添加示例手续费','sample-fee')+'</div>':adminTab==='reports'?reportPanel(x):adminTab==='games'?gamePanel(x):adminTab==='marketing'?window.RentalMarketing.render(x):adminTab==='ai-access'?window.RentalAI.render(x):settingsPanel(x);
+return top+nav+'<div class="gap">'+content+'</div>';}
+
+const games=[{name:'游戏样位 A',cat:'Slots'},{name:'游戏样位 B',cat:'Slots'},{name:'游戏样位 C',cat:'Slots'},{name:'游戏样位 D',cat:'Slots'},{name:'真人样位 A',cat:'Live'},{name:'真人样位 B',cat:'Live'},{name:'体育样位',cat:'Sports'},{name:'彩票样位',cat:'Lottery'}];
+function auth(){if(!authMode)return '';return '<section class="panel gap"><div class="row"><h3>'+ (authMode==='register'?'注册页面样板':'登录页面样板')+'</h3>'+btn('关闭','close-auth')+'</div><div class="formgrid"><label>注册方式<select id="rd-method"><option>电话号码</option><option>邮箱</option></select></label><div class="note">这里只展示流程；请勿输入个人资料或密码。</div></div><div class="note">手机或邮箱 → 验证码 → 建立账号。验证码服务与真实注册尚未接入。</div>'+btn('模拟完成','fake-auth','','primary')+'</section>';}
+function frontSections(x){
+if(frontPage==='wallet'){const balance=x.ledger.reduce((a,l)=>a+l.cents,0);return '<section class="panel gap"><div class="row"><h3>我的钱包</h3><span class="badge">演示数据</span></div><p class="small">本客户示例账目 · 当前展示整个平台的样板流水。</p><div class="wallet-total"><span>演示余额</span><strong>'+money(balance)+'</strong></div><div class="tools">'+btn('存款流程','front-page','deposit','primary')+btn('提款流程','front-page','withdraw','gold')+'</div><h3 class="gap">交易记录</h3><div class="scroll"><table><thead><tr><th>流水</th><th>类别</th><th class="money">金额</th></tr></thead><tbody>'+(x.ledger.length?x.ledger.map((l,i)=>'<tr><td>DEMO-'+String(i+1).padStart(3,'0')+'</td><td>'+esc(l.label)+'</td><td class="money">'+money(l.cents)+'</td></tr>').join(''):'<tr><td colspan="3">暂无演示交易。</td></tr>')+'</tbody></table></div></section>';}
+
+if(frontPage==='promotions')return '<section class="panel gap"><h3>优惠活动</h3><p class="small">活动内容以后由每个客户在后台设置。</p><div class="catalog"><article class="game"><strong>新会员</strong><span class="small">活动位 · 暂无规则</span></article><article class="game"><strong>每日活动</strong><span class="small">活动位 · 暂无规则</span></article><article class="game"><strong>每周活动</strong><span class="small">活动位 · 暂无规则</span></article><article class="game"><strong>每月活动</strong><span class="small">活动位 · 暂无规则</span></article></div></section>';
+if(frontPage==='vip')return '<section class="panel gap"><h3>VIP 中心</h3><div class="formgrid"><div class="panel"><span class="small">会员等级</span><h2>VIP</h2><p>等级规则待设置</p></div><div><div class="planrow"><span>升级条件</span><span>由客户配置</span></div><div class="planrow"><span>每周权益</span><span>待设置</span></div><div class="planrow"><span>每月权益</span><span>待设置</span></div></div></div></section>';
+if(frontPage==='download')return '<section class="panel gap"><h3>下载中心</h3><p>手机浏览器可打开此样板。</p><div class="note">Android APK 待正式开发、签名和打包，目前没有安装包。</div>'+btn('返回首页','front-page','home','gold')+'</section>';
+if(frontPage==='events')return '<section class="panel gap"><h3>活动专区</h3><p class="small">客户可在正式后台配置公告和活动图片。</p><div class="note">目前没有已发布活动。</div></section>';
+if(frontPage==='deposit'||frontPage==='withdraw'){const dep=frontPage==='deposit',balance=x.ledger.reduce((a,l)=>a+l.cents,0);return '<section class="panel gap"><h3>'+(dep?'存款':'提款')+'流程样板</h3><p>当前演示余额：'+money(balance)+'</p><div class="formgrid"><label>渠道<select disabled><option>本地银行 · 待接入</option></select></label><label>货币<select disabled><option>MYR</option></select></label></div><div class="note">仅演示订单和余额变化，不输入银行卡、收款资料或密码，不进行真实收付款。</div>'+btn(dep?'模拟存入 RM100':'模拟申请提款 RM40',dep?'mock-deposit':'mock-withdraw','','primary')+'</section>';}
+if(frontPage==='support')return '<section class="panel gap"><h3>客服中心</h3><div class="planrow"><span>人工客服</span><span>连接入口待设置</span></div><div class="planrow"><span>AI 选配</span><span>'+ (x.ai?'演示开启':'默认关闭')+'</span></div><div class="note">真实客服、AI 及 Telegram 以后连接。现在只展示入口。</div></section>';
+return '';
+}
+function front(){const x=t(),active=status(x)==='active';
+const frontNav=[['home','首页'],['Slots','Slots'],['Live','Live Casino'],['Sports','Sports'],['Lottery','Lottery'],['promotions','Promos'],['vip','VIP'],['wallet','钱包'],['events','HOTEvent'],['download','Download']];
+return '<div class="row"><span class="small">客户平台预览 · '+esc(x.name)+'</span>'+picker()+'</div><section class="panel gap"><div class="fronthead"><div class="frontidentity">'+(x.logo==='seven'?'<img class="frontend-logo" src="/assets/logo-7-128.webp" srcset="/assets/logo-7-128.webp 128w, /assets/logo-7-256.webp 256w" sizes="(max-width:500px) 44px, 56px" width="56" height="56" alt="数字 7 标志" decoding="async">':'')+'<span class="frontend-brand">'+esc(x.brandTitle)+'</span></div><div class="tools"><span class="small">'+esc(x.language)+'</span>'+btn('登录','login')+btn('注册','register','','gold')+'</div></div><nav class="frontnav gap" aria-label="前台菜单">'+frontNav.map(([key,label])=>btn(label,'front-page',key,frontPage===key?'active':'')).join('')+'</nav>'+
+(frontPage==='home'?'<div class="hero" data-cover="'+esc(x.cover)+'"><span class="eyebrow">2027 EDITION</span><h2>'+esc(x.headline)+'</h2><p>'+esc(x.subtitle)+'</p>'+btn('注册','register','','gold')+'</div><div class="quick"><button type="button" class="cursor-interaction" data-action="register"><strong>注册</strong><span>手机号码 / 邮箱</span></button><button type="button" class="cursor-interaction" data-action="front-page" data-id="deposit"><strong>存款</strong><span>订单与支付入口</span></button><button type="button" class="cursor-interaction" data-action="front-page" data-id="withdraw"><strong>提款</strong><span>申请与审核入口</span></button></div>':'')+
+(!active?'<div class="note">演示租期状态：'+stateName(x)+'。模拟交易入口已停用。</div>':'')+
+(['home','Slots','Live','Sports','Lottery'].includes(frontPage)?'<div class="row gap"><h3>'+(frontPage==='home'?'精选游戏':esc(frontPage))+'</h3><span class="small">真实目录待导入</span></div><nav aria-label="游戏分类">'+['全部','Slots','Live','Sports','Lottery'].map(c=>btn(c,'category',c,category===c?'active':'')).join('')+'</nav><div class="catalog" id="rd-games">'+games.filter((g,i)=>!x.hidden.includes(i)&&(category==='全部'||g.cat===category)).map(g=>'<button class="game cursor-interaction" type="button" data-action="game"'+(!active?' disabled':'')+'><i data-lucide="'+({Slots:'grid-2x2',Live:'users',Sports:'trophy',Lottery:'ticket'}[g.cat])+'" aria-hidden="true"></i><strong>'+g.name+'</strong><span class="small">'+g.cat+' · 占位</span></button>').join('')+'</div><p class="small">你提供的游戏稍后统一接入。这里的数量和图片为样位，不是实际游戏目录。</p>':frontSections(x))+
+auth()+'<div class="frontfoot gap"><div><strong>付款方式</strong><p class="small">本地银行 / Payment Gateway / QR Pay / Crypto<br>接口待设置</p></div><div><strong>会员服务</strong><div class="tools">'+btn('优惠','front-page','promotions')+btn('VIP','front-page','vip')+btn('客服','front-page','support')+'</div></div></div></section>';}
+
+function mobileNav(){return view==='front'?'<nav class="mobile-nav" aria-label="手机快捷导航">'+[['home','首页'],['promotions','优惠'],['wallet','钱包'],['support','客服'],['download','下载']].map(([key,label])=>btn(label,'front-page',key,frontPage===key?'active':'')).join('')+'</nav>':'';}
+function roleControls(){
+if(readOnly){
+root.querySelectorAll('form input,form select,form textarea,form button,#rd-ai').forEach(el=>{if(!el.readOnly)el.disabled=true;});
+root.querySelectorAll('button[data-action]').forEach(el=>{if(['create','clone','pause','member-add','member-toggle','game-toggle','sample','sample-fee','mock-deposit','mock-withdraw','mk-click','mk-register','mk-optin-add','mk-optin-revoke','ai-plan-revoke','revoke-access','import-show','theme-reset','theme-cancel','retry-pending'].includes(el.dataset.action))el.disabled=true;});
+}
+
+if(!identity.owner)root.querySelectorAll('#rd-settings [name=name],#rd-settings [name=domain],#rd-settings [name=until],#rd-settings [name=status]').forEach(el=>el.disabled=true);
+if(t()&&t().role==='viewer'){
+root.querySelectorAll('form input,form select,form textarea,form button,#rd-ai').forEach(el=>el.disabled=true);
+root.querySelectorAll('button[data-action]').forEach(el=>{if(['theme-reset','theme-cancel','member-add','member-toggle','game-toggle','sample','sample-fee','mock-deposit','mock-withdraw','mk-click','mk-register','mk-optin-add','mk-optin-revoke','ai-plan-revoke'].includes(el.dataset.action))el.disabled=true;});
+}}
+function applyTheme(values){window.RentalTheme.apply(root,values);if(document.body)window.RentalTheme.apply(document.body,values);}
+function render(){if(view==='hq'&&!identity.owner)view='tenant';applyTheme(themeDraft&&themeDraft.tenantId===selected&&view==='tenant'&&adminTab==='settings'?themeDraft.values:t());
+app.innerHTML=header()+'<main><div id="rd-network-status" role="status">'+(readOnly?'<div class="note">只读预览：可查看总部与各客户配置。正式游戏、资金、支付及会员服务尚未接入。</div>':'')+(notice?'<div class="note">'+esc(notice)+'</div>':'')+(pendingRequest?btn('确认上次保存','retry-pending','','gold'):'')+'</div>'+(tenants.length?(view==='hq'&&identity.owner?hq():view==='tenant'?tenant():front()):'<section class="panel"><h2>客户配置暂未载入</h2><p>请重新载入或重新登录。</p></section>')+'<div class="tools gap">'+btn('重新载入后台','reload')+'</div></main>'+mobileNav()+'<footer class="footer">Master7 总部 · 会员与账目为示例 · 当前状态以页面提示为准</footer>';roleControls();}
+function workspaceTools(){return '<details id="rd-advanced" class="panel gap advanced-tools"'+(advancedOpen?' open':'')+'><summary>高级设置：复制模型与账号权限</summary><section class="panel gap"><div class="row"><h3>复制品牌模型</h3><span class="small">只复制外观与游戏显示设置</span></div><p class="small">品牌模板不包含会员、账目、客户授权、推广记录或 AI 接入计划。</p><div class="tools">'+picker()+btn('导出所选客户模型','export-template',selected,'gold')+btn('粘贴模型建新客户','import-show')+'</div>'+(modelText?'<label class="gap">可 Copy Paste 的品牌模板<textarea readonly rows="10" style="width:100%;font:14px/1.6 monospace">'+esc(modelText)+'</textarea></label>'+btn('下载模板 JSON','download-template','','gold'):'<p class="small">选择客户后导出模型，可复制或下载，之后用于新客户配置。</p>')+(importing?'<form id="rd-import" class="gap"><div class="formgrid"><label>新客户名称<input name="name" required maxlength="40"></label><label>拟用网址（未绑定）<input name="domain" required maxlength="100" placeholder="client-c.example"></label></div><label class="gap">粘贴模板 JSON<textarea name="template" required rows="8" maxlength="12000" style="width:100%;font:14px/1.6 monospace"></textarea></label><div class="tools gap"><button type="submit" class="primary">保存新客户</button>'+btn('取消','import-close')+'</div></form>':'')+'</section><section class="panel gap"><h3>客户账号权限</h3><p class="small">当前为老板独立登录。代理独立账号与客户授权服务待正式接入。</p></section></details>';}
+async function fetchAPI(payload){const response=await fetch('/api/control',payload?{method:'POST',credentials:'same-origin',headers:{'Content-Type':'application/json','X-Platform-Request':'1','X-CSRF-Token':csrfToken},body:JSON.stringify(payload)}:{credentials:'same-origin',cache:'no-store'});let data;try{data=await response.json();}catch{throw new Error('后台没有返回有效内容，请重新载入。');}if(!response.ok){const error=new Error(data.error||'操作失败，请稍后重试。');error.status=response.status;throw error;}return data;}
+function receive(data){csrfToken=data.csrfToken||csrfToken;readOnly=data.readOnly!==false;if(pendingRequest&&pendingRequest.userId!==data.identity.userId){pendingRequest=null;stashPending();}tenants=data.tenants;logs=data.logs;assignments=data.assignments;identity=data.identity;if(data.selected&&tenants.some(x=>x.id===data.selected))selected=data.selected;if(!tenants.some(x=>x.id===selected))selected=tenants[0]?.id||'';if(!identity.owner&&view==='hq')view='tenant';}
+function showError(error){const box=root.querySelector('#rd-network-status');if(box)box.innerHTML='<div class="note" role="alert">'+esc(error.message||'保存失败，请重试。')+' 内容尚未清空。</div>'+(pendingRequest?btn('确认上次保存','retry-pending','','gold'):'');else app.innerHTML='<main><section class="panel"><h2>后台暂未载入</h2><p role="alert">'+esc(error.message)+'</p><a href="/login" target="_top">登录后重新打开</a><div class="tools gap">'+btn('重试载入','reload')+'</div></section></main>';}
+function stashPending(){try{if(pendingRequest)sessionStorage.setItem('platform.pending.v2',JSON.stringify({userId:identity.userId,...pendingRequest}));else sessionStorage.removeItem('platform.pending.v2');}catch{}}
+function restorePending(){if(pendingRequest)return;try{const stored=JSON.parse(sessionStorage.getItem('platform.pending.v2')||'null');if(stored&&stored.userId===identity.userId&&typeof stored.payload?.requestKey==='string'&&typeof stored.signature==='string'){const {requestKey,...base}=stored.payload;if(JSON.stringify(base)===stored.signature)pendingRequest={userId:identity.userId,signature:stored.signature,payload:stored.payload};}}catch{}}
+async function operate(action,extra={},target=selected,replay=false){
+if(saving)return null;
+if(readOnly){showError(new Error('当前为只读预览，尚未启用保存。'));return null;}
+let base={action,tenantId:target,revision:tenants.find(x=>x.id===target)?.revision,...extra};
+if(replay&&pendingRequest){const {requestKey,...saved}=pendingRequest.payload;base=saved;}
+const signature=JSON.stringify(base);if(pendingRequest&&pendingRequest.signature!==signature){showError(new Error('上次保存结果尚未确认，请先按“确认上次保存”，再进行新操作。'));return null;}
+saving=true;app.setAttribute('aria-busy','true');const disabled=Array.from(root.querySelectorAll('button,input,select,textarea')).map(el=>[el,el.disabled]);disabled.forEach(([el])=>el.disabled=true);
+if(!pendingRequest||pendingRequest.signature!==signature)pendingRequest={userId:identity.userId,signature,payload:{...base,requestKey:crypto.randomUUID()}};stashPending();
+try{const data=await fetchAPI(pendingRequest.payload);pendingRequest=null;stashPending();if(data.tenants)receive(data);notice=data.notice||'操作已保存。';return data;}catch(error){if(error.status&&error.status<500)pendingRequest=null;stashPending();showError(error);return null;}finally{saving=false;app.removeAttribute('aria-busy');disabled.forEach(([el,was])=>el.disabled=was);}}
+async function load(){if(saving)return;saving=true;try{const data=await fetchAPI();receive(data);restorePending();themeDraft=null;notice=readOnly?'':'已载入客户配置。';if(pendingRequest)notice+=' 上次保存还需确认。';render();}catch(error){showError(error);}finally{saving=false;}}
+function validate(data,exclude){const name=String(data.get('name')||'').trim(),domain=String(data.get('domain')||'').trim().toLowerCase(),until=String(data.get('until')||''),color=String(data.get('color')||'#b49354'),language=String(data.get('language')||'三语'),st=String(data.get('status')||'active');
+if(!name||name.length>40)return {error:'请输入不超过 40 个字的客户名称。'};
+if(!/^(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+[a-z]{2,63}$/.test(domain))return {error:'请输入网址格式，例如 client-c.example，不要加 https://。'};
+if(tenants.some(x=>x.id!==exclude&&(x.domain===domain||x.name===name)))return {error:'客户名称或网址已存在，请换一个。'};
+if(!/^\d{4}-\d{2}-\d{2}$/.test(until)||!Number.isFinite(Date.parse(until)))return {error:'请选择有效的租期结束日期。'};
+if(!exclude&&until<today())return {error:'新平台的租期结束日期不能早于今天。'};
+return {name,domain,until,color:/^#[a-f0-9]{6}$/i.test(color)?color:'#b49354',language,headline:String(data.get('headline')||'Welcome').trim().slice(0,60),subtitle:String(data.get('subtitle')||'').trim().slice(0,100),brandTitle:String(data.get('brandTitle')||'').trim().slice(0,40),logo:data.get('logo')==='seven'?'seven':'none',cover:data.get('cover')==='classic'?'classic':'premium',status:['active','paused','draft'].includes(st)?st:'draft'};}
+root.addEventListener('input',e=>{const key=e.target.dataset?.themeColor;if(!Object.hasOwn(window.RentalTheme.defaults,key)||!window.RentalTheme.valid(e.target.value)||saving||t()?.role==='viewer')return;themeDraft={tenantId:selected,values:{...(themeDraft?.tenantId===selected?themeDraft.values:window.RentalTheme.colors(t())),[key]:e.target.value}};applyTheme(themeDraft.values);const state=root.querySelector('#rd-theme-state');if(state)state.textContent='正在预览，还未保存。满意后按“保存颜色”。';});
+root.addEventListener('toggle',e=>{if(e.target.id==='rd-advanced')advancedOpen=e.target.open;},true);
+root.addEventListener('submit',async e=>{const ids=['rd-theme','rd-create','rd-settings','mk-campaign-form','ai-plan-form','rd-import','rd-grant'];if(!ids.includes(e.target.id))return;e.preventDefault();if(saving)return;const fields=Object.fromEntries(new FormData(e.target));let result=null;
+if(e.target.id==='rd-theme'){
+const palette=Object.fromEntries(Object.keys(window.RentalTheme.defaults).map(key=>[key,fields[key]]));
+if(Object.values(palette).some(value=>!window.RentalTheme.valid(value))){showError(new Error('请选择有效颜色。'));return;}
+result=await operate('settings',{config:palette});if(result){themeDraft=null;notice='颜色已保存；这个客户的平台会使用新配色。';}
+}else if(e.target.id==='rd-create'||e.target.id==='rd-settings'){
+const create=e.target.id==='rd-create';const values=create?fields:{...t(),...fields};const fd=new FormData();for(const [key,value] of Object.entries(values))if(typeof value==='string')fd.set(key,value);const cfg=validate(fd,create?null:selected);if(cfg.error){showError(new Error(cfg.error));return;}
+result=await operate(create?'create':'settings',{config:cfg});if(result)creating=false;
+}else if(e.target.id==='mk-campaign-form')result=await operate('mk-create',{campaign:fields});
+else if(e.target.id==='ai-plan-form')result=await operate('ai-plan',{plan:{mode:fields.mode,includeFAQ:fields.includeFAQ==='yes',includeDrafts:fields.includeDrafts==='yes',includeReports:fields.includeReports==='yes'}});
+else if(e.target.id==='rd-grant')result=await operate('grant',{userId:fields.userId,role:fields.role},fields.tenantId);
+else if(e.target.id==='rd-import'){let template;try{template=JSON.parse(fields.template);}catch{showError(new Error('模板 JSON 格式无效，请检查粘贴内容。'));return;}result=await operate('import',{name:fields.name,domain:fields.domain,template});if(result)importing=false;}
+if(result)render();});
+root.addEventListener('change',async e=>{if(e.target.id==='rd-select'){themeDraft=null;selected=e.target.value;frontPage='home';category='全部';authMode='';reportOpen=false;notice='';render();}if(e.target.id==='rd-ai'){const result=await operate('ai-toggle',{enabled:e.target.checked});if(result)render();else e.target.checked=t().ai;}});
+root.addEventListener('click',async e=>{const b=e.target.closest('button[data-action]');if(!b||!root.contains(b)||b.disabled||saving)return;const a=b.dataset.action,id=b.dataset.id;notice='';
+if(a==='logout'){try{const r=await fetch('/logout',{method:'POST',credentials:'same-origin',headers:{'Content-Type':'application/json','X-CSRF-Token':csrfToken},body:'{}'});if(!r.ok)throw new Error('退出失败，请重试。');location.href='/login';}catch(error){showError(error);}return;}
+if(a==='reload'){await load();return;}
+if(a==='retry-pending'){if(!pendingRequest)return;const result=await operate('',{},selected,true);if(result){themeDraft=null;render();}return;}
+if(a==='theme-reset'||a==='theme-cancel'){if(t()?.role==='viewer')return;themeDraft=a==='theme-reset'?{tenantId:selected,values:{...window.RentalTheme.defaults}}:null;render();return;}
+themeDraft=null;
+if(a==='export-template'){const x=tenants.find(x=>x.id===id)||t();const keys=['color','deepColor','aquaColor','language','headline','subtitle','brandTitle','logo','cover','hidden'];const result=readOnly?{template:{format:'platform-brand-template',version:1,...Object.fromEntries(keys.map(k=>[k,x[k]]))}}:await operate('export',{},id);if(result){advancedOpen=true;modelText=JSON.stringify(result.template,null,2);notice='品牌模板已准备，可复制或下载；没有客户数据。';render();}return;}
+if(a==='download-template'){const url=URL.createObjectURL(new Blob([modelText],{type:'application/json'}));const link=document.createElement('a');link.href=url;link.download='platform-brand-template.json';link.click();URL.revokeObjectURL(url);return;}
+if(a==='revoke-access'){const x=JSON.parse(id);const result=await operate('revoke',{userId:x.user_id},x.tenant_id);if(result)render();return;}
+if(['clone','pause','member-add','member-toggle','game-toggle','sample','sample-fee','mock-deposit','mock-withdraw','mk-click','mk-register','mk-optin-add','mk-optin-revoke','ai-plan-revoke'].includes(a)){
+const target=['clone','pause'].includes(a)?id:selected;const result=await operate(a,{id},target);if(result)render();return;}
+if(a==='theme-open'){if(t()?.role==='viewer')return;selected=id||selected;view='tenant';adminTab='settings';creating=false;authMode='';}
+else if(a.startsWith('view-')){view=a.slice(5);if(view==='hq'&&!identity.owner)view='tenant';creating=false;authMode='';if(view==='front'){frontPage='home';category='全部';}}
+else if(a==='create')creating=true;
+else if(a==='cancel-create')creating=false;
+else if(a==='import-show'){advancedOpen=true;importing=true;}
+else if(a==='import-close')importing=false;
+else if(a==='manage'||a==='preview'){selected=id;view=a==='manage'?'tenant':'front';frontPage='home';adminTab='overview';category='全部';authMode='';}
+else if(a==='admin-tab'){adminTab=id;reportOpen=false;}
+else if(a==='report-open')reportOpen=!reportOpen;
+else if(a==='ai-test'){root.querySelector('#rd-answer').textContent=t().ai?'模拟客服：您好，您可以使用电话号码或邮箱注册。实际 AI 尚未接入。':'这个客户的 AI 选配已关闭。';return;}
+else if(a==='front-page'){frontPage=id;category=['Slots','Live','Sports','Lottery'].includes(id)?id:'全部';authMode='';}
+else if(a==='category')category=id;
+else if(a==='login'||a==='register')authMode=a;
+else if(a==='close-auth')authMode='';
+else if(a==='fake-auth'){const wasLogin=authMode==='login';authMode='';notice=wasLogin?'会员登录流程演示；尚未接入真实会员身份验证。':'会员注册流程演示；尚未建立真实会员账号。';}
+else if(a==='game')notice='游戏占位，真实供应商 API 尚未连接。';
+else if(a==='apk')notice='APK 尚未生成，正式版本需要应用签名和下载包。';
+render();if(a==='create')root.querySelector('input[name=name]')?.focus();});
+app.innerHTML='<main><section class="panel"><h2>正在载入 Master7 总部</h2><p role="status">读取已保存的客户配置……</p></section></main>';
+load();
+})();
+</script></div>
+</body></html>

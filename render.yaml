@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: master7-platform
+    runtime: node
+    plan: free
+    region: singapore
+    buildCommand: npm test
+    startCommand: npm start
+    healthCheckPath: /healthz
+    autoDeployTrigger: off
+    envVars:
+      - key: NODE_VERSION
+        value: 24.19.0
+      - key: NODE_ENV
+        value: production
+      - key: DEMO_READ_ONLY
+        value: "true"
+      - key: ADMIN_COOKIE_SECURE
+        value: "true"

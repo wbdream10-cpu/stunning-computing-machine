@@ -1,0 +1,13 @@
+{
+  "name": "master7-platform",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": "24.x"
+  },
+  "scripts": {
+    "start": "node standalone/server.mjs",
+    "test": "node --test standalone/test-server.mjs"
+  }
+}
